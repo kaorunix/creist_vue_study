@@ -9,18 +9,32 @@
       メニュー
         </v-list-item>
         <v-divider/>
-        <v-list dense nav>
-          <v-list-item v-for="main_menu_item in main_menu"
-          :key="main_menu_item.name">
-            <v-list-item-icon>
-              <v-icon>{{ main_menu_item.icon }}</v-icon>
-            </v-list-item-icon>
+        <v-list dense nav=false>
+
+          <v-list-group v-for="main_menu_item in main_menu"
+          :key="main_menu_item.name"
+          :prepend-icon="main_menu_item.icon"
+          no-action
+          :append-icon="main_menu_item.lists ? undefined : ''">
+
+            <template v-slot:activator>
             <v-list-item-content>
               <v-list-item-title>
                 {{ main_menu_item.name }}
               </v-list-item-title>
             </v-list-item-content>
-          </v-list-item>
+            </template>
+
+            <v-list-item v-for="sub_menu in main_menu_item.lists"
+            :key="sub_menu.name"
+            :to="sub_menu.link"
+            >
+              <v-list-item-content>
+                <v-list-item-title>{{ sub_menu.name }}</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </v-list-group>
+
         </v-list>
       </v-container>
     </v-navigation-drawer>
@@ -44,7 +58,7 @@
     </v-menu>
     </v-app-bar>
     <v-main app>
-      メイン
+      <router-view />
     </v-main>
     <v-footer app>
       フッター
@@ -63,12 +77,54 @@ export default {
         '連絡先'
       ],
       main_menu: [
-        { name: 'member1', icon: 'mdi-vuetify' },
-        { name: 'member2', icon: 'mdi-cards-spade' },
-        { name: 'member3', icon: 'mdi-cat' },
-        { name: 'member4', icon: 'mdi-paperclip' },
-        { name: 'member5', icon: 'mdi-horseshoe' },
-        { name: 'member6', icon: 'mdi-scale-balance' }
+        {
+          name: 'member1',
+          icon: 'mdi-vuetify',
+          lists: [
+            { name: 'Project', link: '/' },
+            { name: 'Personal', link: '/about' }
+          ]
+        },
+        {
+          name: 'member2',
+          icon: 'mdi-cards-spade',
+          lists: [
+            { name: 'Project' },
+            { name: 'Personal' }
+          ]
+        },
+        {
+          name: 'member3',
+          icon: 'mdi-cat',
+          lists: [
+            { name: 'Project' },
+            { name: 'Personal' }
+          ]
+        },
+        {
+          name: 'member4',
+          icon: 'mdi-paperclip',
+          lists: [
+            { name: 'Project' },
+            { name: 'Personal' }
+          ]
+        },
+        {
+          name: 'member5',
+          icon: 'mdi-horseshoe',
+          lists: [
+            { name: 'Project' },
+            { name: 'Personal' }
+          ]
+        },
+        {
+          name: 'member6',
+          icon: 'mdi-scale-balance',
+          lists: [
+            { name: 'Project' },
+            { name: 'Personal' }
+          ]
+        }
       ]
     }
   }
