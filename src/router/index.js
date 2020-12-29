@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import hy from '../views/hy.vue'
 import SS from '../views/SS.vue'
 
 Vue.use(VueRouter)
@@ -24,7 +25,6 @@ const routes = [
     name: 'About'
   },
   {
-
     path: '/project2',
     name: 'project2',
     component: () => import(/* webpackChunkName: "projetct2" */ '../views/Project2.vue')
@@ -44,7 +44,6 @@ const routes = [
   },
   {
     path: '/ss',
-
     name: 'SS',
     component: SS
   }
