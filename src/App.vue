@@ -90,8 +90,8 @@ export default {
           name: 'member2',
           icon: 'mdi-cards-spade',
           lists: [
-            { name: 'Project' },
-            { name: 'Personal' }
+            { name: 'Project', link: '/project2' },
+            { name: 'Personal', link: '/about2' }
           ]
         },
         {
@@ -111,11 +111,11 @@ export default {
           ]
         },
         {
-          name: 'member5',
-          icon: 'mdi-horseshoe',
+          name: 'S.S.',
+          icon: 'mdi-minecraft',
           lists: [
-            { name: 'Project' },
-            { name: 'Personal' }
+            { name: 'Project', link: '/' },
+            { name: 'Personal', link: '/SS' }
           ]
         },
         {
