@@ -49,9 +49,10 @@
       <v-list>
         <v-subheader>ヘルプ</v-subheader>
         <v-list-item v-for="menu_item in company_menu"
-        :key="menu_item">
+        :key="menu_item.name"
+        :to="menu_item.link">
           <v-list-item-content>
-            <v-list-item-title>{{ menu_item }}</v-list-item-title>
+            <v-list-item-title>{{ menu_item.name }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
@@ -72,9 +73,9 @@ export default {
     return {
       drawer: null,
       company_menu: [
-        '会社紹介',
-        '沿革',
-        '連絡先'
+        { name: '会社紹介', link: '/' },
+        { name: '沿革', link: '/' },
+        { name: '連絡先', link: '`mailto:s@a`' }
       ],
       main_menu: [
         {
