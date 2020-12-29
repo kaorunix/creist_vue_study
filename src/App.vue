@@ -111,11 +111,11 @@ export default {
           ]
         },
         {
-          name: 'member5',
-          icon: 'mdi-horseshoe',
+          name: 'S.S.',
+          icon: 'mdi-minecraft',
           lists: [
-            { name: 'Project' },
-            { name: 'Personal' }
+            { name: 'Project', link: '/' },
+            { name: 'Personal', link: '/SS' }
           ]
         },
         {
