@@ -27,8 +27,6 @@ const routes = [
     name: 'About'
   },
   {
-    path: '/sa',
-    name: 'About'
     path: '/project2',
     name: 'project2',
     component: () => import(/* webpackChunkName: "projetct2" */ '../views/Project2.vue')
@@ -40,7 +38,8 @@ const routes = [
   },
   {
     path: '/hy',
-    name: 'About'
+    name: 'hy',
+    component: hy
   },
   {
     path: '/sk',
