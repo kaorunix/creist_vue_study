@@ -95,10 +95,10 @@ export default {
           ]
         },
         {
-          name: 'member3',
+          name: 'hy',
           icon: 'mdi-cat',
           lists: [
-            { name: 'Project' },
+            { name: 'Project', link: '/hy' },
             { name: 'Personal' }
           ]
         },
