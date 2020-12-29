@@ -103,11 +103,11 @@ export default {
           ]
         },
         {
-          name: 'member4',
+          name: 'sk',
           icon: 'mdi-paperclip',
           lists: [
-            { name: 'Project' },
-            { name: 'Personal' }
+            { name: 'Project', link: '/skPrj' },
+            { name: 'Personal', link: '/sk' }
           ]
         },
         {
