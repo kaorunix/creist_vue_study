@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import SkAbout from '../views/SkAbout.vue'
+import SkPrj from '../views/SkProject.vue'
 
 Vue.use(VueRouter)
 
@@ -20,23 +22,29 @@ const routes = [
   },
   {
     path: '/ks',
-    name: 'About',
+    name: 'About'
   },
   {
     path: '/sa',
-    name: 'About',
+    name: 'About'
   },
   {
     path: '/hy',
-    name: 'About',
+    name: 'About'
   },
   {
     path: '/sk',
-    name: 'About',
+    name: 'SkAbout',
+    component: SkAbout
+  },
+  {
+    path: '/skPrj',
+    name: 'SkProject',
+    component: SkPrj
   },
   {
     path: '/ss',
-    name: 'About',
+    name: 'About'
   }
 ]
 
