@@ -3,6 +3,8 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import SkAbout from '../views/SkAbout.vue'
 import SkPrj from '../views/SkProject.vue'
+import hy from '../views/hy.vue'
+import SS from '../views/SS.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,14 @@ const routes = [
   {
     path: '/sa',
     name: 'About'
+    path: '/project2',
+    name: 'project2',
+    component: () => import(/* webpackChunkName: "projetct2" */ '../views/Project2.vue')
+  },
+  {
+    path: '/about2',
+    name: 'about2',
+    component: () => import(/* webpackChunkName: "about2" */ '../views/About2.vue')
   },
   {
     path: '/hy',
@@ -44,7 +54,8 @@ const routes = [
   },
   {
     path: '/ss',
-    name: 'About'
+    name: 'SS',
+    component: SS
   }
 ]
 
